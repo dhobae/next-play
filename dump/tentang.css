@@ -1,0 +1,140 @@
+/* Gaya khusus halaman Tentang Kami */
+.inner-hero {
+    min-height: 520px;
+    padding: 190px 0 110px;
+    background:
+        linear-gradient(90deg, rgba(11, 14, 19, 0.98), rgba(11, 14, 19, 0.72)),
+        url("https://placehold.co/1800x800/181D20/46C200?text=Placeholder+Tentang+Kami")
+            center/cover;
+    display: flex;
+    align-items: center;
+}
+.inner-hero h1 {
+    max-width: 760px;
+    color: var(--white);
+    font-size: clamp(48px, 7vw, 88px);
+    font-weight: 800;
+    letter-spacing: -0.06em;
+    line-height: 0.98;
+}
+.inner-hero h1 span,
+.section-padding h2 span {
+    color: var(--green);
+}
+.inner-hero p:last-child {
+    max-width: 560px;
+    color: #c5cccf;
+    font-size: 18px;
+    margin-top: 24px;
+}
+.section-light {
+    background: #f0f3f1;
+}
+.about-page-image {
+    min-height: 450px;
+}
+.vision-item {
+    display: flex;
+    gap: 20px;
+    padding: 24px 0;
+    border-top: 1px solid var(--line);
+}
+.vision-item h3 {
+    font-size: 20px;
+    font-weight: 800;
+    margin: 0 0 7px;
+}
+.vision-item p {
+    color: #667075;
+    margin: 0;
+}
+.vision-icon {
+    width: 48px;
+    height: 48px;
+    flex: 0 0 48px;
+    display: grid;
+    place-items: center;
+    color: var(--black);
+    background: var(--green);
+    font-size: 21px;
+}
+.dark-copy {
+    color: #b8c1c3;
+    max-width: 540px;
+}
+.mini-stat {
+    border-top: 1px solid #3a4447;
+    padding-top: 15px;
+}
+.mini-stat strong {
+    display: block;
+    color: var(--green);
+    font-size: 32px;
+    line-height: 1;
+}
+.mini-stat span {
+    display: block;
+    color: #aab4b6;
+    font-size: 12px;
+    margin-top: 8px;
+}
+.image-placeholder-dark {
+    background: #20272a;
+    border-color: #485457;
+    color: #748084;
+}
+.person-card-light {
+    background: #eef1ef;
+    border: 1px solid var(--line);
+}
+.person-card-light .person-info {
+    background: #eef1ef;
+}
+.person-card-light .person-info h3 {
+    color: var(--black);
+}
+.person-card-light .person-info p {
+    color: #6d777a;
+}
+.address-list p {
+    display: flex;
+    gap: 15px;
+    align-items: flex-start;
+    color: #626c70;
+    margin: 0 0 18px;
+}
+.address-list i {
+    color: var(--green2);
+    font-size: 18px;
+    margin-top: 3px;
+}
+.map-wrap {
+    min-height: 420px;
+    border: 8px solid var(--white);
+    box-shadow: 0 16px 40px rgba(11, 14, 19, 0.12);
+    background: #dfe4e1;
+}
+.map-wrap iframe {
+    width: 100%;
+    height: 404px;
+    border: 0;
+    display: block;
+}
+@media (max-width: 767px) {
+    .inner-hero {
+        min-height: 470px;
+        padding: 160px 0 90px;
+    }
+    .about-page-image {
+        min-height: 300px;
+    }
+    .map-wrap {
+        min-height: 320px;
+    }
+    .map-wrap iframe {
+        height: 304px;
+    }
+    .vision-item {
+        gap: 14px;
+    }
+}

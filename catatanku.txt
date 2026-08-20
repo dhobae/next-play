@@ -1,0 +1,16 @@
+1. pakai yajra tabel kena done
+2. bagian visi misi pakai text rich editor js plugin done
+
+=================================================================
+
+
+1. text editor urutan masih salah yang tadinya 
+- 
+-
+- malah tetap 1. 2. 3.
+
+
+
+================================================================
+
+done nya baru sampai visi dan misi
