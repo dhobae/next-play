@@ -10,6 +10,7 @@ use Illuminate\Foundation\Auth\RegistersUsers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Carbon;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Cache;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Validator;
@@ -46,8 +47,21 @@ class RegisterController extends Controller
         $this->middleware('guest');
     }
 
+    public function showRegistrationForm()
+    {
+        if (User::exists()) {
+            return redirect()->route('login');
+        }
+
+        return view('auth.register');
+    }
+
     public function register(Request $request)
     {
+        if (User::exists()) {
+            return redirect()->route('login');
+        }
+
         $this->validator($request->all())->validate();
 
         $code = (string) random_int(100000, 999999);
@@ -73,6 +87,10 @@ class RegisterController extends Controller
 
     public function showVerificationForm()
     {
+        if (User::exists()) {
+            return redirect()->route('login');
+        }
+
         abort_unless(session()->has('registration.email'), 404);
 
         return view('auth.verify-registration', [
@@ -82,6 +100,10 @@ class RegisterController extends Controller
 
     public function verify(Request $request)
     {
+        if (User::exists()) {
+            return redirect()->route('login');
+        }
+
         $request->validate([
             'code' => ['required', 'digits:6'],
         ]);
@@ -110,11 +132,22 @@ class RegisterController extends Controller
             return back()->withErrors(['code' => 'Kode OTP tidak valid.']);
         }
 
-        $user = User::create([
-            'name' => $pending->name,
-            'email' => $pending->email,
-            'password' => $pending->password,
-        ]);
+        $user = null;
+        Cache::lock('admin-registration', 10)->block(5, function () use ($pending, &$user) {
+            if (User::exists()) {
+                return;
+            }
+
+            $user = User::create([
+                'name' => $pending->name,
+                'email' => $pending->email,
+                'password' => $pending->password,
+            ]);
+        });
+
+        if (!$user) {
+            return redirect()->route('login');
+        }
 
         $pending->delete();
         session()->forget('registration.email');

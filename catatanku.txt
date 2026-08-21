@@ -1,16 +1,4 @@
-1. pakai yajra tabel kena done
-2. bagian visi misi pakai text rich editor js plugin done
+masih ada kekurangan (tapi lewati aja) :
+1. reset password langsung masuk harusnya ke login aja
+2. habis otp registrasi cms langsung masuk harusnya ke login aja
 
-=================================================================
-
-
-1. text editor urutan masih salah yang tadinya 
-- 
--
-- malah tetap 1. 2. 3.
-
-
-
-================================================================
-
-done nya baru sampai visi dan misi

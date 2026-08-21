@@ -226,13 +226,11 @@
                     <p class="eyebrow">KUNJUNGI KAMI</p>
                     <h2>Lokasi & <span>Alamat.</span></h2>
                     <p class="text-muted mt-4">
-                        Mari bertemu dan bertukar cerita. Kantor kami
-                        terbuka untuk kolaborasi dan diskusi bersama.
+                        Kami berlokasi di Kalimantan Selatan, pusat kegiatan padel.
                     </p>
                     <div class="address-list mt-4">
                         <p>
-                            <i class="bi bi-geo-alt-fill"></i><span>Jl. Kolaborasi No. 12<br />Jakarta
-                                Selatan, Indonesia</span>
+                            <i class="bi bi-geo-alt-fill"></i><span>Jalan Sukarelawan, Nomor 62, Kelurahan Komet,<br />Kota Banjarbaru, Kalimantan Selatan</span>
                         </p>
                         <p>
                             <i class="bi bi-envelope-fill"></i><span>halo@karyabersama.id</span>

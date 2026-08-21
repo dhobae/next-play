@@ -15,69 +15,111 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
 </head>
 
-<body>
+<body class="auth-page">
     <div id="app">
-        <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
-            <div class="container">
-                <a class="navbar-brand" href="{{ url('/') }}">
-                    {{ config('app.name', 'Laravel') }}
-                </a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                    aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <!-- Left Side Of Navbar -->
-                    <ul class="navbar-nav me-auto">
-
-                    </ul>
-
-                    <!-- Right Side Of Navbar -->
-                    <ul class="navbar-nav ms-auto">
-                        <!-- Authentication Links -->
-                        @guest
-                            @if (Route::has('login'))
-                                <li class="nav-item">
-                                    <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
-                                </li>
-                            @endif
-
-                            @if (Route::has('register'))
-                                <li class="nav-item">
-                                    <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
-                                </li>
-                            @endif
-                        @else
-                            <li class="nav-item dropdown">
-                                <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button"
-                                    data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                                    {{ Auth::user()->name }}
-                                </a>
-
-                                <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-                                    <a class="dropdown-item" href="{{ route('logout') }}"
-                                        onclick="event.preventDefault();
-                                                     document.getElementById('logout-form').submit();">
-                                        {{ __('Logout') }}
-                                    </a>
-
-                                    <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
-                                        @csrf
-                                    </form>
-                                </div>
-                            </li>
-                        @endguest
-                    </ul>
-                </div>
-            </div>
-        </nav>
-
-        <main class="py-4">
+        <main class="auth-shell">
             @yield('content')
         </main>
     </div>
+
+    <style>
+        :root {
+            --auth-ink: #17212b;
+            --auth-muted: #687582;
+            --auth-accent: #176b87;
+            --auth-accent-dark: #0f526a;
+            --auth-border: #dbe4e8;
+        }
+
+        .auth-page {
+            min-height: 100vh;
+            color: var(--auth-ink);
+            background: #eef5f5;
+            background-image: linear-gradient(135deg, rgba(23, 107, 135, .08), transparent 45%), linear-gradient(315deg, rgba(242, 170, 76, .12), transparent 42%);
+        }
+
+        .auth-shell {
+            min-height: 100vh;
+            display: grid;
+            place-items: center;
+            padding: 2rem 1rem;
+        }
+
+        .auth-card {
+            width: min(100%, 460px);
+            background: #fff;
+            border: 1px solid rgba(219, 228, 232, .9);
+            border-radius: 14px;
+            box-shadow: 0 20px 55px rgba(23, 33, 43, .11);
+        }
+
+        .auth-card-body {
+            padding: 2.5rem;
+        }
+
+        .auth-mark {
+            width: 44px;
+            height: 44px;
+            display: grid;
+            place-items: center;
+            color: #fff;
+            background: var(--auth-accent);
+            border-radius: 11px;
+            font-size: 1.25rem;
+            font-weight: 700;
+        }
+
+        .auth-title {
+            margin: 1.4rem 0 .5rem;
+            font-weight: 700;
+            letter-spacing: -.02em;
+        }
+
+        .auth-subtitle {
+            color: var(--auth-muted);
+            margin-bottom: 2rem;
+        }
+
+        .auth-label {
+            color: var(--auth-ink);
+            font-size: .9rem;
+            font-weight: 600;
+            margin-bottom: .45rem;
+        }
+
+        .auth-input {
+            border-color: var(--auth-border);
+            padding: .72rem .85rem;
+        }
+
+        .auth-input:focus {
+            border-color: var(--auth-accent);
+            box-shadow: 0 0 0 .2rem rgba(23, 107, 135, .12);
+        }
+
+        .auth-button {
+            width: 100%;
+            border: 0;
+            padding: .78rem 1rem;
+            background: var(--auth-accent);
+        }
+
+        .auth-button:hover,
+        .auth-button:focus {
+            background: var(--auth-accent-dark);
+        }
+
+        .auth-note {
+            color: var(--auth-muted);
+            font-size: .86rem;
+        }
+
+        @media (max-width: 480px) {
+            .auth-card-body {
+                padding: 2rem 1.5rem;
+            }
+        }
+    </style>
 
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
         integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous">
