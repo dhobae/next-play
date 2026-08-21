@@ -13,19 +13,12 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/test', function () {
-    return view('emails.password-reset');
-});
-
-
-Auth::routes();
-
-Route::get('register/verify', [App\Http\Controllers\Auth\RegisterController::class, 'showVerificationForm'])
-    ->middleware(['guest', 'throttle:10,1'])
-    ->name('register.verify');
-Route::post('register/verify', [App\Http\Controllers\Auth\RegisterController::class, 'verify'])
-    ->middleware(['guest', 'throttle:5,1'])
-    ->name('register.verify.submit');
+Route::get('login', [App\Http\Controllers\Auth\LoginController::class, 'showLoginForm'])
+    ->middleware('guest')->name('login');
+Route::post('login', [App\Http\Controllers\Auth\LoginController::class, 'login'])
+    ->middleware('guest');
+Route::post('logout', [App\Http\Controllers\Auth\LoginController::class, 'logout'])
+    ->middleware('auth')->name('logout');
 
 
 Route::middleware(['auth'])->group(function () {
@@ -34,10 +27,6 @@ Route::middleware(['auth'])->group(function () {
         Route::get('profil', [App\Http\Controllers\Admin\ProfileController::class, 'index'])->name('profile.index');
         Route::put('profil', [App\Http\Controllers\Admin\ProfileController::class, 'updateProfile'])->name('profile.update');
         Route::put('profil/password', [App\Http\Controllers\Admin\ProfileController::class, 'updatePassword'])->name('profile.password.update');
-        Route::post('profil/email/otp', [App\Http\Controllers\Admin\ProfileController::class, 'sendEmailOtp'])
-            ->middleware('throttle:5,1')->name('profile.email.otp');
-        Route::post('profil/email/verify', [App\Http\Controllers\Admin\ProfileController::class, 'verifyEmailOtp'])
-            ->middleware('throttle:10,1')->name('profile.email.verify');
         Route::prefix('carousel')->name('carousel.')->group(function () {
             Route::get('/', [App\Http\Controllers\Admin\Beranda\CarouselController::class, 'index'])->name('index');
             Route::post('/', [App\Http\Controllers\Admin\Beranda\CarouselController::class, 'store'])->name('store');
