@@ -26,7 +26,7 @@
               <div class="col-lg-3">
                   <h4>Kontak</h4>
                   <p>
-                      halo@karyabersama.id<br />+62 812 3456 7890<br />Jakarta,
+                      halo@karyabersama.id<br />+62 812 3456 7890<br />Kalimantan Selatan,
                       Indonesia
                   </p>
               </div>

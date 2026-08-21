@@ -101,12 +101,12 @@
             width: 100%;
             border: 0;
             padding: .78rem 1rem;
-            background: var(--auth-accent);
+            background: var(--auth-accent) !important;
         }
 
         .auth-button:hover,
         .auth-button:focus {
-            background: var(--auth-accent-dark);
+            background: var(--auth-accent-dark) !important;
         }
 
         .auth-note {

@@ -1,5 +1,8 @@
   <!--end::App Wrapper-->
   <!--begin::Script-->
+  <script>
+      document.getElementById('currentYear').textContent = new Date().getFullYear();
+  </script>
   <!--begin::Third Party Plugin(OverlayScrollbars)-->
   <script src="https://cdn.jsdelivr.net/npm/overlayscrollbars@2.11.0/browser/overlayscrollbars.browser.es6.min.js"
       crossorigin="anonymous"></script>

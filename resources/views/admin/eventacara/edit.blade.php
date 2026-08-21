@@ -5,9 +5,9 @@
         <div class="card shadow-sm">
             <div class="card-header d-flex justify-content-between align-items-center">
                 <h3 class="card-title mb-0">Edit Event</h3>
-                <a href="{{ route('admin.eventacara.index') }}" class="btn btn-secondary btn-sm">
+                {{-- <a href="{{ route('admin.eventacara.index') }}" class="btn btn-secondary btn-sm">
                     <i class="bi bi-arrow-left me-1"></i> Kembali
-                </a>
+                </a> --}}
             </div>
             <div class="card-body">
                 @if ($errors->any())

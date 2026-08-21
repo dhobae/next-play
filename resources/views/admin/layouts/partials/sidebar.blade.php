@@ -108,6 +108,11 @@
                     <p>Footer</p>
                 </a></li>
             <li class="nav-header">Manajemen Akun</li>
+            <li class="nav-item"><a href="{{ route('admin.profile.index') }}"
+                    class="nav-link {{ Request::is('admin/profil*') ? 'active' : '' }}"><i
+                        class="nav-icon bi bi-person-circle"></i>
+                    <p>Profil</p>
+                </a></li>
         </ul>
     </nav>
 </div>

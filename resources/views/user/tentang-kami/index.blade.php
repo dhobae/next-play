@@ -125,7 +125,7 @@
                 <div class="col-lg-6 order-lg-2">
                     <p class="eyebrow">IDENTITAS KAMI</p>
                     <h2 class="text-white">Siapa <span>Kami?</span></h2>
-                    <p class="dark-copy mt-4">
+                    <p class="dark-copy mt-4" style="text-align: justify">
                         Pengurus Provinsi Perkumpulan Besar Padel Indonesia (PBPI) Kalimantan Selatan merupakan struktur
                         organisasi yang dibentuk sebagai wadah pembinaan, pengembangan, dan pengelolaan olahraga padel di
                         tingkat daerah. epengurusan PBPI Kalimantan Selatan dipimpin oleh Ketua: Handi Erfani, didampingi
@@ -133,7 +133,7 @@
                         Kepengurusan ini didukung bidang pembinaan prestasi, organisasi, kompetisi, serta hubungan
                         masyarakat yang bekerja secara sinergis dalam menjalankan program kerja.
                     </p>
-                    <p class="dark-copy mt-4">Dengan komitmen profesionalisme dan kolaborasi, PBPI Kalimantan Selatan
+                    <p class="dark-copy mt-4" style="text-align: justify">Dengan komitmen profesionalisme dan kolaborasi, PBPI Kalimantan Selatan
                         berperan aktif dalam membangun sistem pembinaan atlet yang terarah, menyelenggarakan kompetisi yang
                         berkelanjutan, serta memperkuat jaringan dengan berbagai pihak. Melalui kepengurusan yang solid,
                         PBPI Kalimantan Selatan diharapkan mampu mendorong kemajuan olahraga padel dan mencetak atlet

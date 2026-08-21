@@ -31,6 +31,13 @@ Route::post('register/verify', [App\Http\Controllers\Auth\RegisterController::cl
 Route::middleware(['auth'])->group(function () {
     Route::get('admin/beranda', [App\Http\Controllers\Admin\BerandaController::class, 'index'])->name('home');
     Route::prefix('admin/')->name('admin.')->group(function () {
+        Route::get('profil', [App\Http\Controllers\Admin\ProfileController::class, 'index'])->name('profile.index');
+        Route::put('profil', [App\Http\Controllers\Admin\ProfileController::class, 'updateProfile'])->name('profile.update');
+        Route::put('profil/password', [App\Http\Controllers\Admin\ProfileController::class, 'updatePassword'])->name('profile.password.update');
+        Route::post('profil/email/otp', [App\Http\Controllers\Admin\ProfileController::class, 'sendEmailOtp'])
+            ->middleware('throttle:5,1')->name('profile.email.otp');
+        Route::post('profil/email/verify', [App\Http\Controllers\Admin\ProfileController::class, 'verifyEmailOtp'])
+            ->middleware('throttle:10,1')->name('profile.email.verify');
         Route::prefix('carousel')->name('carousel.')->group(function () {
             Route::get('/', [App\Http\Controllers\Admin\Beranda\CarouselController::class, 'index'])->name('index');
             Route::post('/', [App\Http\Controllers\Admin\Beranda\CarouselController::class, 'store'])->name('store');

@@ -3,7 +3,11 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
-// use Illuminate\Http\Request;
+use App\Models\Atlet;
+use App\Models\BerandaCarousel;
+use App\Models\BerandaSponsor;
+use App\Models\EventAcara;
+use App\Models\Visitor;
 
 class BerandaController extends Controller
 {
@@ -24,6 +28,14 @@ class BerandaController extends Controller
      */
     public function index()
     {
-        return view('admin.dashboard');
+        return view('admin.dashboard', [
+            'stats' => [
+                'events' => EventAcara::count(),
+                'athletes' => Atlet::count(),
+                'visitors' => Visitor::count(),
+                'sponsors' => BerandaSponsor::count(),
+            ],
+            'latestEvents' => EventAcara::latest()->take(3)->get(),
+        ]);
     }
 }

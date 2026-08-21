@@ -67,7 +67,7 @@
                         <h2>
                             Tentang Komunitas<br /><span>Kami.</span>
                         </h2>
-                        <p class="text-muted mt-4">
+                        <p class="text-muted mt-4" style="text-align: justify;">
                             Olahraga padel merupakan cabang olahraga raket yang semakin berkembang pesat di dunia, termasuk
                             di Indonesia. Padel dimainkan secara berpasangan di lapangan berdinding, mengombinasikan unsur
                             permainan tenis dan squash, sehingga menghadirkan dinamika permainan yang cepat, menarik, dan
@@ -76,7 +76,7 @@
                             itu, padel dikenal sebagai olahraga yang inklusif karena dapat dimainkan oleh berbagai usia,
                             mulai dari pemula hingga atlet profesional.
                         </p>
-                        <p class="text-muted">
+                        <p class="text-muted" style="text-align: justify;">
                             Di Indonesia, khususnya di Kalimantan Selatan, perkembangan olahraga padel menunjukkan tren yang
                             positif dengan semakin bertambahnya venue, komunitas, dan minat masyarakat. Hal ini menjadi
                             peluang besar dalam pembinaan dan pengembangan atlet, terutama pada kelompok usia dini dan
@@ -178,7 +178,7 @@
                         <p class="eyebrow">EVENT TERKINI</p>
                         <h2>Event <span>Terbaru.</span></h2>
                     </div>
-                    <a href="#event" class="link-green">Lihat semua event <i class="bi bi-arrow-right"></i></a>
+                    <a href="{{ route('events') }}" class="link-green">Lihat semua event <i class="bi bi-arrow-right"></i></a>
                 </div>
                 <div class="row g-4">
                     @foreach ($events as $event)

@@ -73,7 +73,7 @@
                                             <span
                                                 class="event-date">{{ \Carbon\Carbon::parse($event->tanggal)->translatedFormat('d F Y') }}</span>
                                             <h3>{{ $event->judul }}</h3>
-                                            <p>{{ Str::limit($featuredEvent->deskripsi, 100, '...') }}</p>
+                                            <p>{{ Str::limit($event->deskripsi, 100, '...') }}</p>
                                             <a href="{{ route('events.show', $event) }}">Lihat selengkapnya
                                                 <i class="bi bi-arrow-right"></i></a>
                                         </article>
