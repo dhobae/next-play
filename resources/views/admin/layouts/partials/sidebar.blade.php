@@ -90,6 +90,24 @@
                                 class="nav-icon bi bi-trophy-fill"></i>
                             <p>Riwayat Turnamen</p>
                         </a></li>
+
+                </ul>
+            </li>
+            <li class="nav-item {{ Request::is('admin/klub*') || Request::is('admin/season*') ? 'menu-open' : '' }}">
+                <a href="#" class="nav-link"><i class="nav-icon bi bi-clock-history"></i>
+                    <p>History<i class="nav-arrow bi bi-chevron-right"></i></p>
+                </a>
+                <ul class="nav nav-treeview">
+                    <li class="nav-item"><a href="{{ route('admin.klub.index') }}"
+                            class="nav-link {{ Request::is('admin/klub*') ? 'active' : '' }}"><i
+                                class="nav-icon bi bi-building"></i>
+                            <p>Klub</p>
+                        </a></li>
+                    <li class="nav-item"><a href="{{ route('admin.season.index') }}"
+                            class="nav-link {{ Request::is('admin/season*') ? 'active' : '' }}"><i
+                                class="nav-icon bi bi-calendar3"></i>
+                            <p>Season</p>
+                        </a></li>
                 </ul>
             </li>
             <li class="nav-item"><a href="{{ route('admin.hubungikami.index') }}"
@@ -97,7 +115,7 @@
                         class="nav-icon bi bi-envelope"></i>
                     <p>Hubungi Kami</p>
                 </a></li>
-            <li class="nav-item"><a href="{{ route('admin.hubungikami.index') }}"
+            {{-- <li class="nav-item"><a href="{{ route('admin.hubungikami.index') }}"
                     class="nav-link {{ Request::is('admin/header*') ? 'active' : '' }}"><i
                         class="nav-icon bi bi-layout-text-window-reverse"></i>
                     <p>Header</p>
@@ -106,7 +124,7 @@
                     class="nav-link {{ Request::is('admin/footer*') ? 'active' : '' }}"><i
                         class="nav-icon bi bi-layout-text-window"></i>
                     <p>Footer</p>
-                </a></li>
+                </a></li> --}}
             <li class="nav-header">Manajemen Akun</li>
             <li class="nav-item"><a href="{{ route('admin.profile.index') }}"
                     class="nav-link {{ Request::is('admin/profil*') ? 'active' : '' }}"><i

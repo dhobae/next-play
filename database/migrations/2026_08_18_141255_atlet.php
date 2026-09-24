@@ -21,7 +21,9 @@ return new class extends Migration {
                 'Beginner',
             ]);
             $table->tinyInteger('jenis_kelamin'); // 0 laki laki 1 perempuan
-            $table->string('klub_asosiasi');
+            // $table->string('klub_asosiasi');
+            // yang baru :
+            $table->unsignedBigInteger('klub_id');
             $table->string('tempat_lahir');
             $table->date('tanggal_lahir');
             $table->string('kebangsaan');

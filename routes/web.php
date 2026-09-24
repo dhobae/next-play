@@ -70,6 +70,8 @@ Route::middleware(['auth'])->group(function () {
         });
         Route::resource('eventacara', App\Http\Controllers\Admin\EventAcara\EventAcaraController::class)->except('show');
         Route::resource('atlet', App\Http\Controllers\Admin\Atlet\AtletController::class);
+        Route::resource('klub', App\Http\Controllers\Admin\KlubController::class)->except('show');
+        Route::resource('season', App\Http\Controllers\Admin\SeasonController::class);
         Route::prefix('atlet-riwayat')->name('atlet-riwayat.')->group(function () {
             Route::get('/', [App\Http\Controllers\Admin\Atlet\AtletRiwayatController::class, 'index'])->name('index');
             Route::get('atlet/{atlet}', [App\Http\Controllers\Admin\Atlet\AtletRiwayatController::class, 'manage'])->name('manage');
@@ -88,6 +90,9 @@ Route::get('events', [App\Http\Controllers\User\EventAcaraController::class, 'in
 Route::get('events/{event}', [App\Http\Controllers\User\EventAcaraController::class, 'show'])->name('events.show');
 Route::get('atlets', [App\Http\Controllers\User\AtletController::class, 'index'])->name('atlets');
 Route::get('atlets/{atlet}', [App\Http\Controllers\User\AtletController::class, 'show'])->name('atlets.show');
+Route::get('history', [App\Http\Controllers\User\HistoryController::class, 'index'])->name('history');
+Route::get('history/load-more', [App\Http\Controllers\User\HistoryController::class, 'loadMore'])->name('history.load-more');
+Route::get('history/{season}/{klub}', [App\Http\Controllers\User\HistoryController::class, 'show'])->name('history.show');
 
 
 

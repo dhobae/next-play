@@ -102,6 +102,12 @@
 .image-placeholder i {
     font-size: 25px;
 }
+.image-placeholder img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
 .event-side-list {
     display: flex;
     flex-direction: column;

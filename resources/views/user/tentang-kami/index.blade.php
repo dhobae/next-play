@@ -34,7 +34,7 @@
                 </div>
                 <div class="col-lg-6">
                     <div class="image-placeholder about-page-image">
-                        <i class="bi bi-image"></i><span>Placeholder foto tentang kami</span>
+                        <img src="{{ asset('assets/nextpremiere/padel-dummy.png') }}" alt="Foto tentang kami">
                     </div>
                 </div>
             </div>
@@ -75,7 +75,7 @@
                                 class="about-page-image-img">
                         @else
                             <div class="image-placeholder h-100">
-                                <i class="bi bi-image"></i><span>Placeholder foto visi dan misi</span>
+                                <img src="{{ asset('assets/nextpremiere/padel-dummy.png') }}" alt="Visi dan Misi">
                             </div>
                         @endif
                     </div>
@@ -112,7 +112,8 @@
                 </div>
                 <div class="col-lg-6">
                     <div class="image-placeholder about-page-image">
-                        <i class="bi bi-image"></i><span>Placeholder foto PBPI</span>
+                        <img src="{{ asset('assets/nextpremiere/padel-dummy.png') }}" alt="Foto PBPI">
+                        {{-- <img class="img-fluid" src="https://pbpikalsel.com/assets/uploads/about/9c1edff4515cae8952d52d4a72789032.jpeg" alt=""> --}}
                     </div>
                 </div>
             </div>
@@ -133,7 +134,8 @@
                         Kepengurusan ini didukung bidang pembinaan prestasi, organisasi, kompetisi, serta hubungan
                         masyarakat yang bekerja secara sinergis dalam menjalankan program kerja.
                     </p>
-                    <p class="dark-copy mt-4" style="text-align: justify">Dengan komitmen profesionalisme dan kolaborasi, PBPI Kalimantan Selatan
+                    <p class="dark-copy mt-4" style="text-align: justify">Dengan komitmen profesionalisme dan kolaborasi,
+                        PBPI Kalimantan Selatan
                         berperan aktif dalam membangun sistem pembinaan atlet yang terarah, menyelenggarakan kompetisi yang
                         berkelanjutan, serta memperkuat jaringan dengan berbagai pihak. Melalui kepengurusan yang solid,
                         PBPI Kalimantan Selatan diharapkan mampu mendorong kemajuan olahraga padel dan mencetak atlet
@@ -153,7 +155,8 @@
                 </div>
                 <div class="col-lg-6 order-lg-1">
                     <div class="image-placeholder about-page-image image-placeholder-dark">
-                        <i class="bi bi-image"></i><span>Placeholder foto siapa kami</span>
+                        <img src="{{ asset('assets/nextpremiere/padel-dummy.png') }}" alt="Foto siapa kami">
+                        {{-- <img class="img-fluid" src="https://pbpikalsel.com/assets/uploads/about/d3d8e9b33f9df5c04632c4242b393026.png" alt=""> --}}
                     </div>
                 </div>
             </div>
@@ -170,7 +173,7 @@
                 <div class="col-md-6 col-lg-3">
                     <article class="person-card person-card-light">
                         <div class="image-placeholder person-image">
-                            <i class="bi bi-person"></i>
+                            <img src="{{ asset('assets/nextpremiere/padel-dummy.png') }}" alt="Ahmad Pratama">
                         </div>
                         <div class="person-info">
                             <h3>Ahmad Pratama</h3>
@@ -182,7 +185,7 @@
                 <div class="col-md-6 col-lg-3">
                     <article class="person-card person-card-light">
                         <div class="image-placeholder person-image">
-                            <i class="bi bi-person"></i>
+                            <img src="{{ asset('assets/nextpremiere/padel-dummy.png') }}" alt="Siti Rahma">
                         </div>
                         <div class="person-info">
                             <h3>Siti Rahma</h3>
@@ -194,7 +197,7 @@
                 <div class="col-md-6 col-lg-3">
                     <article class="person-card person-card-light">
                         <div class="image-placeholder person-image">
-                            <i class="bi bi-person"></i>
+                            <img src="{{ asset('assets/nextpremiere/padel-dummy.png') }}" alt="Bagas Wicaksono">
                         </div>
                         <div class="person-info">
                             <h3>Bagas Wicaksono</h3>
@@ -206,7 +209,7 @@
                 <div class="col-md-6 col-lg-3">
                     <article class="person-card person-card-light">
                         <div class="image-placeholder person-image">
-                            <i class="bi bi-person"></i>
+                            <img src="{{ asset('assets/nextpremiere/padel-dummy.png') }}" alt="Nadia Lestari">
                         </div>
                         <div class="person-info">
                             <h3>Nadia Lestari</h3>
@@ -230,7 +233,8 @@
                     </p>
                     <div class="address-list mt-4">
                         <p>
-                            <i class="bi bi-geo-alt-fill"></i><span>Jalan Sukarelawan, Nomor 62, Kelurahan Komet,<br />Kota Banjarbaru, Kalimantan Selatan</span>
+                            <i class="bi bi-geo-alt-fill"></i><span>Jalan Sukarelawan, Nomor 62, Kelurahan Komet,<br />Kota
+                                Banjarbaru, Kalimantan Selatan</span>
                         </p>
                         <p>
                             <i class="bi bi-envelope-fill"></i><span>halo@karyabersama.id</span>

@@ -32,6 +32,12 @@
                          href="{{ route('atlets') }}"
                          @if (request()->routeIs('atlets*')) aria-current="page" @endif>Peringkat</a>
                  </li>
+
+                 <li class="nav-item">
+                     <a class="nav-link {{ request()->routeIs('history*') ? 'active' : '' }}"
+                         href="{{ route('history') }}"
+                         @if (request()->routeIs('history*')) aria-current="page" @endif>History</a>
+                 </li>
                  <li class="nav-item">
                      @php
                          use App\Models\HubungiKami;

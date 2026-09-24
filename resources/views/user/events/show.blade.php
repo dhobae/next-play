@@ -18,7 +18,7 @@
                         @if ($event->gambar)
                             <img src="{{ asset('storage/' . $event->gambar) }}" alt="{{ $event->judul }}">
                         @else
-                            <span>Belum ada gambar event</span><i class="bi bi-image"></i>
+                            <img src="{{ asset('assets/nextpremiere/padel-dummy.png') }}" alt="{{ $event->judul }}">
                         @endif
                     </div>
                     <div class="detail-copy mt-5">
@@ -68,7 +68,8 @@
                                                 <img src="{{ asset('storage/' . $relatedEvent->gambar) }}"
                                                     alt="{{ $relatedEvent->judul }}">
                                             @else
-                                                <span><i class="bi bi-image"></i></span>
+                                                <img src="{{ asset('assets/nextpremiere/padel-dummy.png') }}"
+                                                    alt="{{ $relatedEvent->judul }}">
                                             @endif
                                         </a>
                                         <p class="event-date">
@@ -83,7 +84,8 @@
                                 @for ($placeholderIndex = $relatedEvents->count(); $placeholderIndex < 3; $placeholderIndex++)
                                     <article class="related-event-card related-event-placeholder">
                                         <div class="related-event-image">
-                                            <span><i class="bi bi-calendar-plus"></i></span>
+                                            <img src="{{ asset('assets/nextpremiere/padel-dummy.png') }}"
+                                                alt="Event lainnya akan hadir">
                                         </div>
                                         <p class="event-date">SEGERA HADIR</p>
                                         <h3>Event lainnya akan hadir</h3>

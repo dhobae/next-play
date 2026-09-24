@@ -16,6 +16,8 @@ return new class extends Migration {
                 ->constrained('atlet')
                 ->cascadeOnDelete();
 
+                $table->unsignedBigInteger('season_id');
+                    
             $table->string('nama_turnamen');
             $table->date('tanggal_turnamen');
             $table->enum('hasil_turnamen', [

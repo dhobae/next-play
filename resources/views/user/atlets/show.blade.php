@@ -9,7 +9,6 @@
             'beginner' => 'fa-solid fa-shield-halved',
             default => 'fa-solid fa-shield-halved',
         };
-        $initial = strtoupper(substr($atlet->nama_atlet, 0, 1));
         $rankBadgeClass = match ((int) $rank) {
             1 => 'rank-gold',
             2 => 'rank-dark-silver',
@@ -28,7 +27,7 @@
                         @if ($atlet->foto_atlet)
                             <img src="{{ asset('storage/' . $atlet->foto_atlet) }}" alt="{{ $atlet->nama_atlet }}">
                         @else
-                            <span>{{ $initial }}</span>
+                            <img src="{{ asset('assets/nextpremiere/padel-dummy.png') }}" alt="{{ $atlet->nama_atlet }}">
                         @endif
                     </div>
                     <span class="athlete-rank-chip {{ $rankBadgeClass }}"><i class="fa-solid fa-trophy"></i>
@@ -37,7 +36,7 @@
                 <div class="athlete-detail-copy">
                     <h1>{{ $atlet->nama_atlet }} <span class="detail-level level-{{ $levelClass }}"><i
                                 class="{{ $levelIcon }}"></i> ({{ $atlet->level }})</span></h1>
-                    <p class="detail-rank-label">Peringkat {{ $rank }}</p>
+                    <p class="detail-rank-label">Peringkat {{ $genderLabel }} {{ $rank }}</p>
                     <div class="athlete-detail-tags">
                         <span><i class="fa-solid fa-flag"></i> {{ $atlet->kebangsaan ?: '-' }}</span>
                         <span><i class="fa-solid fa-location-dot"></i> {{ $atlet->tempat_lahir ?: '-' }}</span>
@@ -75,7 +74,7 @@
                         <div class="stat-item stat-grey"><span>Total Turnamen</span><strong>{{ $totalTurnamen }}</strong>
                         </div>
                         <div class="stat-item stat-purple"><span>Peringkat
-                                Nasional</span><strong>#{{ $rank }}</strong></div>
+                                {{ $genderLabel }}</span><strong>#{{ $rank }}</strong></div>
                     </div>
                 </article>
             </div>

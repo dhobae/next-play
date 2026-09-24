@@ -18,7 +18,12 @@ class EventAcaraController extends Controller
     public function index(Request $request)
     {
         if ($request->ajax()) {
-            return DataTables::eloquent(EventAcara::query()->latest())
+            $query = EventAcara::query();
+            if (!$request->filled('order')) {
+                $query->latest();
+            }
+
+            return DataTables::eloquent($query)
                 ->addIndexColumn()
                 ->editColumn('gambar', function (EventAcara $event) {
                     return $event->gambar
@@ -26,6 +31,7 @@ class EventAcaraController extends Controller
                         : '<span class="text-muted">Tidak ada gambar</span>';
                 })
                 ->editColumn('deskripsi', fn(EventAcara $event) => str($event->deskripsi)->limit(80))
+                ->filterColumn('deskripsi', fn($query, $keyword) => $query->where('deskripsi', 'like', "%{$keyword}%"))
                 ->addColumn('aksi', function (EventAcara $event) {
                     return view('admin.eventacara.partials.actions', compact('event'))->render();
                 })

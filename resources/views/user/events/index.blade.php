@@ -27,7 +27,7 @@
                         @if ($featuredEvent->gambar)
                             <img src="{{ asset('storage/' . $featuredEvent->gambar) }}" alt="{{ $featuredEvent->judul }}">
                         @else
-                            <span>Placeholder foto event utama</span><i class="bi bi-image"></i>
+                            <img src="{{ asset('assets/nextpremiere/padel-dummy.png') }}" alt="{{ $featuredEvent->judul }}">
                         @endif
                     </div>
                     <div class="featured-event-copy">
@@ -44,7 +44,7 @@
             @else
                 <article class="featured-event mb-5">
                     <div class="image-placeholder featured-event-image">
-                        <span>Belum ada event terbaru</span><i class="bi bi-calendar-event"></i>
+                        <img src="{{ asset('assets/nextpremiere/padel-dummy.png') }}" alt="Belum ada event terbaru">
                     </div>
                     <div class="featured-event-copy">
                         <h3>Belum ada event terbaru</h3>
@@ -67,7 +67,8 @@
                                                     <img src="{{ asset('storage/' . $event->gambar) }}"
                                                         alt="{{ $event->judul }}">
                                                 @else
-                                                    <i class="bi bi-image"></i>
+                                                    <img src="{{ asset('assets/nextpremiere/padel-dummy.png') }}"
+                                                        alt="{{ $event->judul }}">
                                                 @endif
                                             </div>
                                             <span
@@ -83,8 +84,8 @@
                                     <li class="splide__slide">
                                         <article class="event-grid-card event-placeholder-card">
                                             <div class="image-placeholder event-grid-image">
-                                                <i class="bi bi-calendar-plus"></i>
-                                                <span>Event berikutnya akan hadir</span>
+                                                <img src="{{ asset('assets/nextpremiere/padel-dummy.png') }}"
+                                                    alt="Event berikutnya akan hadir">
                                             </div>
                                             <span class="event-date">SEGERA HADIR</span>
                                             <h3>Event baru akan ditambahkan</h3>

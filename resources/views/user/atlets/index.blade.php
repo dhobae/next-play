@@ -88,24 +88,24 @@
                     }
                 },
                 columns: [{
-                        data: 'DT_RowIndex',
-                        name: 'DT_RowIndex',
+                        data: 'rank',
+                        name: 'rank',
                         searchable: false,
                         orderable: false
                     },
                     {
                         data: 'nama_atlet_display',
-                        name: 'nama_atlet'
+                        name: 'nama_atlet_display'
                     },
                     {
-                        data: 'klub_asosiasi',
-                        name: 'klub_asosiasi'
+                        data: 'klub_nama',
+                        name: 'klub_nama'
                     },
                     {
                         data: 'poin',
-                        name: 'riwayat_turnamen_sum_poin_turnamen',
-                        searchable: false,
-                        orderable: false
+                        name: 'poin',
+                        searchable: true,
+                        orderable: true
                     }
                 ],
                 createdRow: function(row, data) {

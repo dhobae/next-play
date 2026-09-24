@@ -1,5 +1,6 @@
 @php($atlet = $atlet ?? null)
 @php($jenisKelamin = old('jenis_kelamin', $atlet?->jenis_kelamin))
+@php($klubId = old('klub_id', $atlet?->klub_id))
 
 <div class="row">
     <div class="col-md-8">
@@ -38,10 +39,14 @@
                 @enderror
             </div>
             <div class="col-md-6 mb-3">
-                <label for="klub_asosiasi" class="form-label">Klub/Asosiasi</label>
-                <input type="text" name="klub_asosiasi" id="klub_asosiasi" class="form-control"
-                    value="{{ old('klub_asosiasi', $atlet?->klub_asosiasi) }}" required>
-                @error('klub_asosiasi')
+                <label for="klub_id" class="form-label">Klub/Asosiasi</label>
+                <select name="klub_id" id="klub_id" class="form-select select2" required>
+                    <option value="">Pilih klub/asosiasi</option>
+                    @foreach ($klubs as $klub)
+                        <option value="{{ $klub->id }}" @selected((string) $klubId === (string) $klub->id)>{{ $klub->nama_klub }}</option>
+                    @endforeach
+                </select>
+                @error('klub_id')
                     <small class="text-danger">{{ $message }}</small>
                 @enderror
             </div>
@@ -112,5 +117,12 @@
 
         preview.src = URL.createObjectURL(file);
         container.classList.remove('d-none');
+    });
+</script>
+<script>
+    $('#klub_id').select2({
+        theme: 'bootstrap-5',
+        placeholder: 'Pilih klub/asosiasi',
+        width: '100%'
     });
 </script>

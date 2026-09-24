@@ -90,8 +90,8 @@
                         name: 'jenis_kelamin'
                     },
                     {
-                        data: 'klub_asosiasi',
-                        name: 'klub_asosiasi'
+                        data: 'klub_nama',
+                        name: 'klub_nama'
                     },
                     {
                         data: 'kebangsaan',

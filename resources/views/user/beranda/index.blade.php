@@ -59,7 +59,7 @@
 
                     <div class="col-lg-6">
                         <div class="image-placeholder about-image">
-                            <i class="bi bi-image"></i><span>Placeholder foto kegiatan</span>
+                            <img src="{{ asset('assets/nextpremiere/padel-dummy.png') }}" alt="Foto kegiatan">
                         </div>
                     </div>
                     <div class="col-lg-6">
@@ -122,7 +122,7 @@
                     <div class="col-md-6 col-lg-3">
                         <article class="person-card">
                             <div class="image-placeholder person-image">
-                                <i class="bi bi-person"></i>
+                                <img src="{{ asset('assets/nextpremiere/padel-dummy.png') }}" alt="Ahmad Pratama">
                             </div>
                             <div class="person-info">
                                 <h3>Ahmad Pratama</h3>
@@ -134,7 +134,7 @@
                     <div class="col-md-6 col-lg-3">
                         <article class="person-card">
                             <div class="image-placeholder person-image">
-                                <i class="bi bi-person"></i>
+                                <img src="{{ asset('assets/nextpremiere/padel-dummy.png') }}" alt="Siti Rahma">
                             </div>
                             <div class="person-info">
                                 <h3>Siti Rahma</h3>
@@ -146,7 +146,7 @@
                     <div class="col-md-6 col-lg-3">
                         <article class="person-card">
                             <div class="image-placeholder person-image">
-                                <i class="bi bi-person"></i>
+                                <img src="{{ asset('assets/nextpremiere/padel-dummy.png') }}" alt="Bagas Wicaksono">
                             </div>
                             <div class="person-info">
                                 <h3>Bagas Wicaksono</h3>
@@ -158,7 +158,7 @@
                     <div class="col-md-6 col-lg-3">
                         <article class="person-card">
                             <div class="image-placeholder person-image">
-                                <i class="bi bi-person"></i>
+                                <img src="{{ asset('assets/nextpremiere/padel-dummy.png') }}" alt="Nadia Lestari">
                             </div>
                             <div class="person-info">
                                 <h3>Nadia Lestari</h3>
@@ -178,7 +178,8 @@
                         <p class="eyebrow">EVENT TERKINI</p>
                         <h2>Event <span>Terbaru.</span></h2>
                     </div>
-                    <a href="{{ route('events') }}" class="link-green">Lihat semua event <i class="bi bi-arrow-right"></i></a>
+                    <a href="{{ route('events') }}" class="link-green">Lihat semua event <i
+                            class="bi bi-arrow-right"></i></a>
                 </div>
                 <div class="row g-4">
                     @foreach ($events as $event)
@@ -188,14 +189,16 @@
                                     @if ($event->gambar)
                                         <img src="{{ asset('storage/' . $event->gambar) }}" alt="{{ $event->judul }}">
                                     @else
-                                        <i class="bi bi-image"></i>
+                                        <img src="{{ asset('assets/nextpremiere/padel-dummy.png') }}"
+                                            alt="{{ $event->judul }}">
                                     @endif
                                 </div>
                                 <div class="news-body">
                                     <small>{{ \Carbon\Carbon::parse($event->tanggal)->translatedFormat('d F Y') }} ·
                                         EVENT</small>
                                     <h3>{{ $event->judul }}</h3>
-                                    <a href="{{ route('events.show', $event) }}" aria-label="Baca event">Baca selengkapnya
+                                    <a href="{{ route('events.show', $event) }}" aria-label="Baca event">Baca
+                                        selengkapnya
                                         <i class="bi bi-arrow-up-right"></i></a>
                                 </div>
                             </article>
@@ -206,8 +209,8 @@
                         <div class="col-lg-4">
                             <article class="news-card">
                                 <div class="image-placeholder news-image">
-                                    <i class="bi bi-calendar-plus"></i>
-                                    <span>Event berikutnya akan hadir</span>
+                                    <img src="{{ asset('assets/nextpremiere/padel-dummy.png') }}"
+                                        alt="Event berikutnya akan hadir">
                                 </div>
                                 <div class="news-body">
                                     <small>SEGERA HADIR</small>

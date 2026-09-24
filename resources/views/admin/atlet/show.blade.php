@@ -32,7 +32,7 @@
                             <dt class="col-sm-4">Jenis Kelamin</dt>
                             <dd class="col-sm-8">{{ $atlet->jenis_kelamin === 0 ? 'Laki-laki' : 'Perempuan' }}</dd>
                             <dt class="col-sm-4">Klub/Asosiasi</dt>
-                            <dd class="col-sm-8">{{ $atlet->klub_asosiasi }}</dd>
+                            <dd class="col-sm-8">{{ $atlet->klub?->nama_klub ?: '-' }}</dd>
                             <dt class="col-sm-4">Tempat, Tanggal Lahir</dt>
                             <dd class="col-sm-8">{{ $atlet->tempat_lahir }},
                                 {{ $atlet->tanggal_lahir?->format('d-m-Y') ?: '-' }}</dd>
@@ -110,8 +110,8 @@
                     },
                     {
                         data: 'hasil_display',
-                        name: 'hasil_turnamen',
-                        orderable: false
+                        name: 'hasil_display',
+                        searchable: true
                     },
                     {
                         data: 'poin_turnamen',

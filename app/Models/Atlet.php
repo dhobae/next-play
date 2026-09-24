@@ -9,6 +9,11 @@ class Atlet extends Model
 {
     use HasFactory;
 
+    public function klub()
+    {
+        return $this->belongsTo(Klub::class);
+    }
+
     public function riwayatTurnamen()
     {
         return $this->hasMany(AtletRiwayat::class, 'atlet_id');
@@ -21,7 +26,7 @@ class Atlet extends Model
         'foto_atlet',
         'level',
         'jenis_kelamin',
-        'klub_asosiasi',
+        'klub_id',
         'tempat_lahir',
         'tanggal_lahir',
         'kebangsaan',
@@ -31,4 +36,14 @@ class Atlet extends Model
         'tanggal_lahir' => 'date',
         'jenis_kelamin' => 'integer',
     ];
+
+    public function seasonKlubs()
+{
+    return $this->belongsToMany(
+        SeasonKlub::class,
+        'season_klub_atlet',
+        'atlet_id',
+        'season_klub_id'
+    );
+}
 }

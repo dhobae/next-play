@@ -31,7 +31,11 @@
     background: #f0f3f1;
 }
 .about-page-image {
+    height: 450px;
     min-height: 450px;
+}
+.about-page-image > .image-placeholder {
+    height: 100%;
 }
 .about-page-image-img {
     width: 100%;
@@ -153,6 +157,7 @@
         padding: 160px 0 90px;
     }
     .about-page-image {
+        height: 300px;
         min-height: 300px;
     }
     .about-page-image-img {

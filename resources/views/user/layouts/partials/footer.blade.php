@@ -16,7 +16,7 @@
               <div class="col-6 col-lg-2">
                   <h4>Jelajahi</h4>
                   <a href="{{ route('beranda') }}">Beranda</a><a href="{{ route('tentangkami') }}">Tentang Kami</a><a
-                      href="{{ route('events') }}">Event</a><a href="{{ route('atlets') }}">Peringkat</a>
+                      href="{{ route('events') }}">Event</a><a href="{{ route('atlets') }}">Peringkat</a><a href="{{ route('history') }}">History</a>
               </div>
               <div class="col-6 col-lg-2">
                   <h4>Terhubung</h4>

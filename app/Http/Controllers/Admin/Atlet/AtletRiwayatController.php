@@ -25,7 +25,12 @@ class AtletRiwayatController extends Controller
     public function manage(Request $request, Atlet $atlet)
     {
         if ($request->ajax()) {
-            return DataTables::eloquent($atlet->riwayatTurnamen()->latest('created_at')->latest('id'))
+            $query = $atlet->riwayatTurnamen();
+            if (!$request->filled('order')) {
+                $query->latest('created_at')->latest('id');
+            }
+
+            return DataTables::eloquent($query)
                 ->addIndexColumn()
                 ->editColumn('tanggal_turnamen', fn(AtletRiwayat $riwayat) => $riwayat->tanggal_turnamen?->format('d-m-Y'))
                 ->addColumn('aksi', function (AtletRiwayat $riwayat) use ($atlet) {
@@ -35,7 +40,9 @@ class AtletRiwayatController extends Controller
                 ->toJson();
         }
 
-        return view('admin.atlet-riwayat.manage', compact('atlet'));
+        return view('admin.atlet-riwayat.manage', [
+            'atlet' => $atlet,
+        ]);
     }
 
     public function store(Request $request, Atlet $atlet)
@@ -50,7 +57,10 @@ class AtletRiwayatController extends Controller
     {
         $this->ensureBelongsToAtlet($atlet, $riwayat);
 
-        return view('admin.atlet-riwayat.edit', compact('atlet', 'riwayat'));
+        return view('admin.atlet-riwayat.edit', [
+            'atlet' => $atlet,
+            'riwayat' => $riwayat,
+        ]);
     }
 
     public function update(Request $request, Atlet $atlet, AtletRiwayat $riwayat)

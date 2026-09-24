@@ -85,9 +85,7 @@
                     },
                     {
                         data: 'deskripsi',
-                        name: 'deskripsi',
-                        orderable: false,
-                        searchable: false,
+                        name: 'deskripsi'
                     },
                     {
                         data: 'aksi',

@@ -16,6 +16,7 @@ class AtletController extends Controller
 
         if ($request->ajax()) {
             $query = Atlet::query()
+                ->with('klub')
                 ->withSum('riwayatTurnamen', 'poin_turnamen')
                 ->when($request->filled('jenis_kelamin'), function ($query) use ($request) {
                     $query->where('jenis_kelamin', (int) $request->jenis_kelamin);
@@ -31,12 +32,22 @@ class AtletController extends Controller
                     if (isset($levels[$request->level])) {
                         $query->where('level', $levels[$request->level]);
                     }
-                })
+                });
+
+            $rankByAthleteId = (clone $query)
                 ->orderByDesc('riwayat_turnamen_sum_poin_turnamen')
-                ->orderBy('nama_atlet');
+                ->orderBy('nama_atlet')
+                ->pluck('id')
+                ->flip()
+                ->map(fn(int $rank) => $rank + 1);
+
+            if (!$request->filled('order')) {
+                $query->orderByDesc('riwayat_turnamen_sum_poin_turnamen')
+                    ->orderBy('nama_atlet');
+            }
 
             return DataTables::eloquent($query)
-                ->addIndexColumn()
+                ->addColumn('rank', fn(Atlet $atlet) => $rankByAthleteId[$atlet->id] ?? '-')
                 ->addColumn('nama_atlet_display', function (Atlet $atlet) {
                     $initial = strtoupper(substr($atlet->nama_atlet, 0, 1));
                     $foto = $atlet->foto_atlet
@@ -49,7 +60,30 @@ class AtletController extends Controller
                 })
                 ->addColumn('detail_url', fn(Atlet $atlet) => route('atlets.show', $atlet))
                 ->addColumn('poin', fn(Atlet $atlet) => (int) ($atlet->riwayat_turnamen_sum_poin_turnamen ?? 0))
-                ->editColumn('klub_asosiasi', fn(Atlet $atlet) => $atlet->klub_asosiasi ?: '-')
+                ->addColumn('klub_nama', fn(Atlet $atlet) => $atlet->klub?->nama_klub ?: '-')
+                ->filterColumn('nama_atlet_display', function ($query, $keyword) {
+                    $query->where('atlet.nama_atlet', 'like', "%{$keyword}%");
+                })
+                ->filterColumn('klub_nama', function ($query, $keyword) {
+                    $query->whereHas('klub', function ($clubQuery) use ($keyword) {
+                        $clubQuery->where('nama_klub', 'like', "%{$keyword}%");
+                    });
+                })
+                ->filterColumn('poin', function ($query, $keyword) {
+                    $query->whereRaw(
+                        '(select coalesce(sum(atlet_riwayat_turnamen.poin_turnamen), 0) from atlet_riwayat_turnamen where atlet_riwayat_turnamen.atlet_id = atlet.id) like ?',
+                        ["%{$keyword}%"]
+                    );
+                })
+                ->orderColumn('nama_atlet_display', 'atlet.nama_atlet $1')
+                ->orderColumn('klub_nama', function ($query, $direction) {
+                    $query->orderBy(
+                        \App\Models\Klub::select('nama_klub')
+                            ->whereColumn('klub.id', 'atlet.klub_id'),
+                        $direction
+                    );
+                })
+                ->orderColumn('poin', 'riwayat_turnamen_sum_poin_turnamen $1')
                 ->rawColumns(['nama_atlet_display'])
                 ->toJson();
         }
@@ -64,6 +98,7 @@ class AtletController extends Controller
 
         $ranking = Atlet::query()
             ->withSum('riwayatTurnamen', 'poin_turnamen')
+            ->where('jenis_kelamin', $atlet->jenis_kelamin)
             ->orderByDesc('riwayat_turnamen_sum_poin_turnamen')
             ->orderBy('nama_atlet')
             ->pluck('id');
@@ -74,6 +109,7 @@ class AtletController extends Controller
         return view('user.atlets.show', [
             'atlet' => $atlet,
             'rank' => $rank === false ? '-' : $rank + 1,
+            'genderLabel' => $atlet->jenis_kelamin === 0 ? 'Pria' : 'Wanita',
             'totalPoin' => $totalPoin,
             'totalTurnamen' => $atlet->riwayatTurnamen->count(),
         ]);
