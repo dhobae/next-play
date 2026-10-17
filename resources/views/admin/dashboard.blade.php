@@ -50,7 +50,7 @@
             <div class="position-relative" style="z-index: 1;">
                 <p class="text-uppercase small mb-2 opacity-75">Panel administrasi</p>
                 <h1 class="h3 mb-2">Selamat datang, Admin.</h1>
-                <p class="mb-0 opacity-75">Pantau dan kelola konten Next Premiere.</p>
+                <p class="mb-0 opacity-75">Pantau dan kelola konten Next Play.</p>
             </div>
         </div>
 

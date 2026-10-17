@@ -2,7 +2,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="description" content="Karya Bersama — organisasi yang bergerak untuk kemajuan masyarakat." />
-    <title>Next Premiere</title>
+    <title>Next Play</title>
     <link rel="icon" type="image/png" href="{{ asset('/assets/nextpremiere/logo.png') }}">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />

@@ -163,7 +163,7 @@
         </div>
     </section>
 
-    <section id="pengurus" class="section-padding">
+    {{-- <section id="pengurus" class="section-padding">
         <div class="container">
             <div class="section-heading mb-5">
                 <p class="eyebrow">Kenali tim pengurus yang mengelola organisasi kami</p>
@@ -220,9 +220,9 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section> --}}
 
-    <section id="lokasi" class="section-padding section-light">
+    {{-- <section id="lokasi" class="section-padding section-light">
         <div class="container">
             <div class="row g-5 align-items-center">
                 <div class="col-lg-5">
@@ -253,5 +253,5 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section> --}}
 @endsection

@@ -51,6 +51,20 @@ Route::middleware(['auth'])->group(function () {
             Route::put('{hero}', [App\Http\Controllers\Admin\Atlet\HeroController::class, 'update'])->name('update');
             Route::delete('{hero}', [App\Http\Controllers\Admin\Atlet\HeroController::class, 'destroy'])->name('destroy');
         });
+        Route::prefix('klub-riwayat')->name('klub-riwayat.')->group(function () {
+            Route::get('/', [App\Http\Controllers\Admin\Klub\RiwayatLigaController::class, 'index'])->name('index');
+            Route::get('klub/{klub}', [App\Http\Controllers\Admin\Klub\RiwayatLigaController::class, 'manage'])->name('manage');
+            Route::post('klub/{klub}', [App\Http\Controllers\Admin\Klub\RiwayatLigaController::class, 'store'])->name('store');
+            Route::get('klub/{klub}/edit/{riwayat}', [App\Http\Controllers\Admin\Klub\RiwayatLigaController::class, 'edit'])->name('edit');
+            Route::put('klub/{klub}/riwayat/{riwayat}', [App\Http\Controllers\Admin\Klub\RiwayatLigaController::class, 'update'])->name('update');
+            Route::delete('klub/{klub}/riwayat/{riwayat}', [App\Http\Controllers\Admin\Klub\RiwayatLigaController::class, 'destroy'])->name('destroy');
+        });
+        Route::prefix('heroklub')->name('heroklub.')->group(function () {
+            Route::get('/', [App\Http\Controllers\Admin\Klub\HeroController::class, 'index'])->name('index');
+            Route::post('/', [App\Http\Controllers\Admin\Klub\HeroController::class, 'store'])->name('store');
+            Route::put('{hero}', [App\Http\Controllers\Admin\Klub\HeroController::class, 'update'])->name('update');
+            Route::delete('{hero}', [App\Http\Controllers\Admin\Klub\HeroController::class, 'destroy'])->name('destroy');
+        });
         Route::prefix('heroevent')->name('heroevent.')->group(function () {
             Route::get('/', [App\Http\Controllers\Admin\EventAcara\HeroController::class, 'index'])->name('index');
             Route::post('/', [App\Http\Controllers\Admin\EventAcara\HeroController::class, 'store'])->name('store');
@@ -90,6 +104,8 @@ Route::get('events', [App\Http\Controllers\User\EventAcaraController::class, 'in
 Route::get('events/{event}', [App\Http\Controllers\User\EventAcaraController::class, 'show'])->name('events.show');
 Route::get('atlets', [App\Http\Controllers\User\AtletController::class, 'index'])->name('atlets');
 Route::get('atlets/{atlet}', [App\Http\Controllers\User\AtletController::class, 'show'])->name('atlets.show');
+Route::get('peringkat-klub', [App\Http\Controllers\User\KlubRankingController::class, 'index'])->name('peringkat-klub');
+Route::get('peringkat-klub/{klub}', [App\Http\Controllers\User\KlubRankingController::class, 'show'])->name('peringkat-klub.show');
 Route::get('history', [App\Http\Controllers\User\HistoryController::class, 'index'])->name('history');
 Route::get('history/load-more', [App\Http\Controllers\User\HistoryController::class, 'loadMore'])->name('history.load-more');
 Route::get('history/{season}/{klub}', [App\Http\Controllers\User\HistoryController::class, 'show'])->name('history.show');

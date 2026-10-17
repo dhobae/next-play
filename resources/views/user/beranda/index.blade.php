@@ -104,7 +104,7 @@
             </div>
         </section>
 
-        <section id="pengurus" class="section-padding section-dark">
+        {{-- <section id="pengurus" class="section-padding section-dark">
             <div class="container">
                 <div class="section-heading d-flex justify-content-between align-items-end mb-5">
                     <div>
@@ -169,7 +169,7 @@
                     </div>
                 </div>
             </div>
-        </section>
+        </section> --}}
 
         <section id="event" class="section-padding">
             <div class="container">

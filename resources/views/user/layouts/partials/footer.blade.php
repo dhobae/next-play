@@ -6,7 +6,7 @@
                       <span class="brand-mark">
                           <img class="img-fluid" src="{{ asset('assets/nextpremiere/logo.png') }}" alt="LOGO" />
                       </span>
-                      <span>NEXT<span> PREMIERE</span></span>
+                      <span>NEXT<span> PLAY</span></span>
                   </a>
                   <p class="footer-copy">
                       Bergabunglah dengan komunitas padel terbesar di Indonesia. Mainkan, belajar, dan berkembang
@@ -16,7 +16,9 @@
               <div class="col-6 col-lg-2">
                   <h4>Jelajahi</h4>
                   <a href="{{ route('beranda') }}">Beranda</a><a href="{{ route('tentangkami') }}">Tentang Kami</a><a
-                      href="{{ route('events') }}">Event</a><a href="{{ route('atlets') }}">Peringkat</a><a href="{{ route('history') }}">History</a>
+                      href="{{ route('events') }}">Event</a><a href="{{ route('atlets') }}">Peringkat</a><a
+                      href="{{ route('peringkat-klub') }}">Peringkat Club</a><a
+                      href="{{ route('history') }}">History</a>
               </div>
               <div class="col-6 col-lg-2">
                   <h4>Terhubung</h4>
@@ -37,7 +39,7 @@
               <div>
                   <span>Developed with</span>
                   <i class="fa-solid fa-heart" aria-hidden="true"></i>
-                  <span>By Next Premiere</span>
+                  <span>By Next Play</span>
               </div>
           </div>
       </div>

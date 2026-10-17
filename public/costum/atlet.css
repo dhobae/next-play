@@ -761,6 +761,58 @@
     text-align: center;
     color: #8b9691 !important;
 }
+.ranking-club-name {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    min-width: 200px;
+    color: #22282a;
+}
+.ranking-club-name strong {
+    font-size: 12px;
+}
+.ranking-club-avatar,
+.ranking-club-avatar img,
+.club-avatar-fallback {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+}
+.ranking-club-avatar {
+    flex: 0 0 36px;
+    display: grid;
+    place-items: center;
+    overflow: hidden;
+    background: #edf2ef;
+}
+.ranking-club-avatar img {
+    display: block;
+    object-fit: cover;
+}
+.club-avatar-fallback {
+    display: grid;
+    place-items: center;
+    background: #e6ede8;
+    color: #587064;
+}
+.club-ranking-detail-hero {
+    background: linear-gradient(135deg, #123d17, #237b21 58%, #46c200);
+}
+.club-ranking-detail-copy h1 {
+    margin: 0 0 12px;
+    color: #fff;
+    font-size: clamp(28px, 4vw, 42px);
+    line-height: 1.12;
+}
+.club-season-table {
+    min-width: 680px;
+}
+.club-season-table td:not(:first-child) {
+    white-space: nowrap;
+}
+.club-season-table .club-rank-chip {
+    min-width: 46px;
+}
 @media (max-width: 767px) {
     .peringkat-hero {
         min-height: 470px;

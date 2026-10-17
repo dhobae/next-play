@@ -70,7 +70,7 @@
                 </ul>
             </li>
             <li
-                class="nav-item {{ Request::is('admin/heroatlet*') || Request::is('admin/atlet*') || Request::is('admin/atlet-riwayat*') ? 'menu-open' : '' }}">
+                class="nav-item {{ Request::is('admin/heroatlet*') || Request::is('admin/atlet*') || Request::is('admin/atlet-riwayat*') || Request::is('admin/klub-riwayat*') ? 'menu-open' : '' }}">
                 <a href="#" class="nav-link"><i class="nav-icon bi bi-trophy"></i>
                     <p>Peringkat<i class="nav-arrow bi bi-chevron-right"></i></p>
                 </a>
@@ -90,16 +90,27 @@
                                 class="nav-icon bi bi-trophy-fill"></i>
                             <p>Riwayat Turnamen</p>
                         </a></li>
+                    <li class="nav-item"><a href="{{ route('admin.klub-riwayat.index') }}"
+                            class="nav-link {{ Request::is('admin/klub-riwayat*') ? 'active' : '' }}"><i
+                                class="nav-icon bi bi-trophy-fill"></i>
+                            <p>Peringkat Club</p>
+                        </a></li>
 
                 </ul>
             </li>
-            <li class="nav-item {{ Request::is('admin/klub*') || Request::is('admin/season*') ? 'menu-open' : '' }}">
+            <li
+                class="nav-item {{ Request::is('admin/klub/*') || Request::is('admin/season*') || Request::is('admin/heroklub*') ? 'menu-open' : '' }}">
                 <a href="#" class="nav-link"><i class="nav-icon bi bi-clock-history"></i>
                     <p>History<i class="nav-arrow bi bi-chevron-right"></i></p>
                 </a>
                 <ul class="nav nav-treeview">
+                    <li class="nav-item"><a href="{{ route('admin.heroklub.index') }}"
+                            class="nav-link {{ Request::is('admin/heroklub*') ? 'active' : '' }}"><i
+                                class="nav-icon bi bi-bar-chart-line"></i>
+                            <p>Hero Club</p>
+                        </a></li>
                     <li class="nav-item"><a href="{{ route('admin.klub.index') }}"
-                            class="nav-link {{ Request::is('admin/klub*') ? 'active' : '' }}"><i
+                            class="nav-link {{ Request::is('admin/klub/*') ? 'active' : '' }}"><i
                                 class="nav-icon bi bi-building"></i>
                             <p>Klub</p>
                         </a></li>

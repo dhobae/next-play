@@ -27,7 +27,7 @@
     </script>
     <script>
         document.getElementById('copyright').textContent =
-            `© ${new Date().getFullYear()} Next Premiere. All rights reserved.`;
+            `© ${new Date().getFullYear()} Next Play. All rights reserved.`;
     </script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>

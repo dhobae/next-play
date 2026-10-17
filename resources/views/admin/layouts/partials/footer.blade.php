@@ -8,9 +8,8 @@
     <!--begin::Copyright-->
     <strong>
         <span id="currentYear"></span>&nbsp;
-        <a href="/" class="text-decoration-none text-secondary">NextPremiere</a>.
+        <a href="/" class="text-decoration-none text-secondary">Next Play</a>.
     </strong>
     All rights reserved.
     <!--end::Copyright-->
 </footer>
-

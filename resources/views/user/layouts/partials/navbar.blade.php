@@ -4,7 +4,7 @@
              <span class="brand-mark">
                  <img class="img-fluid" src="{{ asset('assets/nextpremiere/logo.png') }}" alt="LOGO" />
              </span>
-             <span>NEXT<span> PREMIERE</span></span>
+             <span>NEXT<span> PLAY</span></span>
          </a>
          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu"
              aria-label="Buka menu">
@@ -32,11 +32,19 @@
                          href="{{ route('atlets') }}"
                          @if (request()->routeIs('atlets*')) aria-current="page" @endif>Peringkat</a>
                  </li>
+                 <li class="nav-item">
+                     <a class="nav-link {{ request()->routeIs('peringkat-klub*') ? 'active' : '' }}"
+                         href="{{ route('peringkat-klub') }}"
+                         @if (request()->routeIs('peringkat-klub*')) aria-current="page" @endif>Peringkat Club</a>
+                 </li>
 
                  <li class="nav-item">
                      <a class="nav-link {{ request()->routeIs('history*') ? 'active' : '' }}"
                          href="{{ route('history') }}"
                          @if (request()->routeIs('history*')) aria-current="page" @endif>History</a>
+                 </li>
+                 <li class="nav-item">
+                     <a class="nav-link" href="https://andri45.vibecoder.co.id/nextplay/" target="_blank">Aplikasi Manajemen Padel</a>
                  </li>
                  <li class="nav-item">
                      @php

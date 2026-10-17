@@ -17,4 +17,14 @@ class Klub extends Model
     {
         return $this->hasMany(Atlet::class);
     }
+
+    public function seasonStandings()
+    {
+        return $this->hasMany(SeasonKlub::class);
+    }
+
+    public function riwayatLiga()
+    {
+        return $this->hasMany(KlubRiwayatLiga::class);
+    }
 }
