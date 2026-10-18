@@ -99,7 +99,7 @@
                 </ul>
             </li>
             <li
-                class="nav-item {{ Request::is('admin/klub/*') || Request::is('admin/season*') || Request::is('admin/heroklub*') ? 'menu-open' : '' }}">
+                class="nav-item {{ Request::is('admin/klub') || Request::is('admin/klub/*') || Request::is('admin/season*') || Request::is('admin/heroklub*') ? 'menu-open' : '' }}">
                 <a href="#" class="nav-link"><i class="nav-icon bi bi-clock-history"></i>
                     <p>History<i class="nav-arrow bi bi-chevron-right"></i></p>
                 </a>
@@ -110,7 +110,7 @@
                             <p>Hero Club</p>
                         </a></li>
                     <li class="nav-item"><a href="{{ route('admin.klub.index') }}"
-                            class="nav-link {{ Request::is('admin/klub/*') ? 'active' : '' }}"><i
+                            class="nav-link {{ Request::is('admin/klub') || Request::is('admin/klub/*') ? 'active' : '' }}"><i
                                 class="nav-icon bi bi-building"></i>
                             <p>Klub</p>
                         </a></li>
