@@ -2,7 +2,6 @@
 
 namespace Database\Seeders;
 
-// use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\Hash;
 
@@ -13,21 +12,14 @@ class DatabaseSeeder extends Seeder
      */
     public function run(): void
     {
-        // \App\Models\User::factory(10)->create();
-
-        $this->call(DemoDataSeeder::class);
-
-        // \App\Models\User::factory()->create([
-        //     'name' => 'Admin',
-        //     'email' => 'ridhosaputs@gmail.com',
-        //     'password' => Hash::make('password'),
-        // ]);
-
         \App\Models\User::factory()->create([
             'username' => 'npnextpremiereadmin',
             'name' => 'Admin',
             'email' => 'admin@premiere.com',
             'password' => Hash::make('npadminpremiere'),
         ]);
+        
+        $this->call(DemoDataSeeder::class);
+
     }
 }

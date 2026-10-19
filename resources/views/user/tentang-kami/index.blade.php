@@ -88,31 +88,21 @@
         <div class="container">
             <div class="row g-5 align-items-center">
                 <div class="col-lg-6">
-                    <p class="eyebrow">TENTANG PBPI</p>
-                    <h2>Mengenal <span>PBPI.</span></h2>
+                    <p class="eyebrow">TENTANG NextPlay</p>
+                    <h2>Mengenal <span>NextPlay.</span></h2>
                     <p class="text-muted mt-4" style="text-align: justify">
-                        Olahraga padel merupakan cabang olahraga raket yang semakin berkembang pesat di dunia, termasuk di
-                        Indonesia. Padel dimainkan secara berpasangan di lapangan berdinding, mengombinasikan unsur
-                        permainan tenis dan squash, sehingga menghadirkan dinamika permainan yang cepat, menarik, dan mudah
-                        dipelajari oleh berbagai kalangan. Keunikan padel terletak pada penggunaan dinding sebagai bagian
-                        dari permainan, yang menuntut strategi, ketepatan, serta kerja sama tim yang baik. Selain itu, padel
-                        dikenal sebagai olahraga yang inklusif karena dapat dimainkan oleh berbagai usia, mulai dari pemula
-                        hingga atlet profesional.
-                    </p>
-                    <p class="text-muted" style="text-align: justify">
-                        Di Indonesia, khususnya di Kalimantan Selatan, perkembangan olahraga padel menunjukkan tren yang
-                        positif dengan semakin bertambahnya venue, komunitas, dan minat masyarakat. Hal ini menjadi peluang
-                        besar dalam pembinaan dan pengembangan atlet, terutama pada kelompok usia dini dan remaja. Dengan
-                        dukungan organisasi, pelatih, serta kolaborasi antar komunitas, padel tidak hanya menjadi sarana
-                        rekreasi, tetapi juga berpotensi melahirkan atlet-atlet berprestasi yang mampu bersaing di tingkat
-                        nasional maupun internasional.
+                        Next Play merupakan penyelenggara liga dan turnamen padel yang menghadirkan pengalaman kompetisi
+                        bagi para pemain dan klub. Melalui liga tahunan dengan sistem peringkat klub serta berbagai
+                        turnamen, kami menciptakan ruang bagi pemain untuk menguji kemampuan, meraih prestasi, dan menikmati
+                        persaingan yang sehat. Dengan konsep kompetisi yang terstruktur dan berkelanjutan, Next Play
+                        berkomitmen untuk menghadirkan pengalaman padel yang semakin menarik dan berkualitas.
                     </p>
                     {{-- <a class="link-green" href="#lokasi">Pelajari lebih lanjut
                         <i class="bi bi-arrow-right"></i></a> --}}
                 </div>
                 <div class="col-lg-6">
                     <div class="image-placeholder about-page-image">
-                        <img src="{{ asset('assets/nextpremiere/padel-dummy.png') }}" alt="Foto PBPI">
+                        <img src="{{ asset('assets/nextpremiere/169-logo.jpg') }}" alt="Foto PBPI">
                         {{-- <img class="img-fluid" src="https://pbpikalsel.com/assets/uploads/about/9c1edff4515cae8952d52d4a72789032.jpeg" alt=""> --}}
                     </div>
                 </div>
@@ -127,19 +117,14 @@
                     <p class="eyebrow">IDENTITAS KAMI</p>
                     <h2 class="text-white">Siapa <span>Kami?</span></h2>
                     <p class="dark-copy mt-4" style="text-align: justify">
-                        Pengurus Provinsi Perkumpulan Besar Padel Indonesia (PBPI) Kalimantan Selatan merupakan struktur
-                        organisasi yang dibentuk sebagai wadah pembinaan, pengembangan, dan pengelolaan olahraga padel di
-                        tingkat daerah. epengurusan PBPI Kalimantan Selatan dipimpin oleh Ketua: Handi Erfani, didampingi
-                        oleh Wakil Ketua: Yogi Nugraha, Sekretaris: Muhammad Habibie dan Bendahara: Ari Tri Fitrianto.
-                        Kepengurusan ini didukung bidang pembinaan prestasi, organisasi, kompetisi, serta hubungan
-                        masyarakat yang bekerja secara sinergis dalam menjalankan program kerja.
+
+                        Kami adalah Next Play, tim yang bergerak di bidang penyelenggaraan kompetisi padel dengan fokus pada
+                        pengalaman bermain, kualitas pertandingan, dan perkembangan olahraga. Kami menghadirkan liga,
+                        turnamen, serta sistem peringkat klub untuk mendukung persaingan yang lebih terarah dan
+                        berkelanjutan. Bagi kami, setiap kompetisi bukan hanya tentang menentukan pemenang, tetapi juga
+                        tentang menciptakan kesempatan, membangun koneksi, dan mendorong setiap pemain untuk terus
+                        berkembang.
                     </p>
-                    <p class="dark-copy mt-4" style="text-align: justify">Dengan komitmen profesionalisme dan kolaborasi,
-                        PBPI Kalimantan Selatan
-                        berperan aktif dalam membangun sistem pembinaan atlet yang terarah, menyelenggarakan kompetisi yang
-                        berkelanjutan, serta memperkuat jaringan dengan berbagai pihak. Melalui kepengurusan yang solid,
-                        PBPI Kalimantan Selatan diharapkan mampu mendorong kemajuan olahraga padel dan mencetak atlet
-                        berprestasi di tingkat nasional maupun internasional.</p>
                     {{-- <div class="row g-3 mt-3">
                         <div class="col-6">
                             <div class="mini-stat">
@@ -155,7 +140,7 @@
                 </div>
                 <div class="col-lg-6 order-lg-1">
                     <div class="image-placeholder about-page-image image-placeholder-dark">
-                        <img src="{{ asset('assets/nextpremiere/padel-dummy.png') }}" alt="Foto siapa kami">
+                        <img src="{{ asset('assets/nextpremiere/169-logo.jpg') }}" alt="Foto siapa kami">
                         {{-- <img class="img-fluid" src="https://pbpikalsel.com/assets/uploads/about/d3d8e9b33f9df5c04632c4242b393026.png" alt=""> --}}
                     </div>
                 </div>

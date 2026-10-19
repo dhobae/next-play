@@ -170,10 +170,15 @@ class DemoDataSeeder extends Seeder
                         'lp' => $pointsAgainst,
                     ];
 
-                    SeasonKlub::updateOrCreate(
+                    $seasonKlub = SeasonKlub::updateOrCreate(
                         ['season_id' => $season->id, 'klub_id' => $club->id],
                         $statistics
-                    )->atlets()->sync(collect($rosters[$club->nama_klub])->pluck('id')->all());
+                    );
+
+                    $seasonKlub->atlets()->syncWithPivotValues(
+                        collect($rosters[$club->nama_klub])->pluck('id')->all(),
+                        ['season_id' => $season->id]
+                    );
 
                     foreach ($statistics as $key => $value) {
                         $seasonTotals[$key] += $value;

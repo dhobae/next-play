@@ -65,12 +65,12 @@
                     <tr>
                         <td colspan="7">
                             <label for="atlets_{{ $klub->id }}" class="form-label mb-1">Atlet yang ikut
-                                serta</label>
+                                serta di klub ini</label>
                             <select name="atlets[{{ $klub->id }}][]" id="atlets_{{ $klub->id }}"
                                 class="form-select season-atlet-select" multiple data-placeholder="Pilih atlet">
-                                @foreach ($atlets->where('klub_id', $klub->id) as $atlet)
+                                @foreach ($atlets as $atlet)
                                     <option value="{{ $atlet->id }}" @selected(in_array($atlet->id, $selectedAtletIds))>
-                                        {{ $atlet->nama_atlet }}
+                                        {{ $atlet->nama_atlet }} (klub saat ini: {{ $atlet->klub?->nama_klub ?? '-' }})
                                     </option>
                                 @endforeach
                             </select>
@@ -84,6 +84,9 @@
         </table>
     </div>
     @error('klub_ids')
+        <small class="text-danger">{{ $message }}</small>
+    @enderror
+    @error('atlets')
         <small class="text-danger">{{ $message }}</small>
     @enderror
 </div>

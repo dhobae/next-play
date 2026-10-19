@@ -59,7 +59,7 @@
 
                     <div class="col-lg-6">
                         <div class="image-placeholder about-image">
-                            <img src="{{ asset('assets/nextpremiere/padel-dummy.png') }}" alt="Foto kegiatan">
+                            <img src="{{ asset('assets/nextpremiere/169-logo.jpg') }}" alt="Foto kegiatan">
                         </div>
                     </div>
                     <div class="col-lg-6">
@@ -68,21 +68,11 @@
                             Tentang Komunitas<br /><span>Kami.</span>
                         </h2>
                         <p class="text-muted mt-4" style="text-align: justify;">
-                            Olahraga padel merupakan cabang olahraga raket yang semakin berkembang pesat di dunia, termasuk
-                            di Indonesia. Padel dimainkan secara berpasangan di lapangan berdinding, mengombinasikan unsur
-                            permainan tenis dan squash, sehingga menghadirkan dinamika permainan yang cepat, menarik, dan
-                            mudah dipelajari oleh berbagai kalangan. Keunikan padel terletak pada penggunaan dinding sebagai
-                            bagian dari permainan, yang menuntut strategi, ketepatan, serta kerja sama tim yang baik. Selain
-                            itu, padel dikenal sebagai olahraga yang inklusif karena dapat dimainkan oleh berbagai usia,
-                            mulai dari pemula hingga atlet profesional.
-                        </p>
-                        <p class="text-muted" style="text-align: justify;">
-                            Di Indonesia, khususnya di Kalimantan Selatan, perkembangan olahraga padel menunjukkan tren yang
-                            positif dengan semakin bertambahnya venue, komunitas, dan minat masyarakat. Hal ini menjadi
-                            peluang besar dalam pembinaan dan pengembangan atlet, terutama pada kelompok usia dini dan
-                            remaja. Dengan dukungan organisasi, pelatih, serta kolaborasi antar komunitas, padel tidak hanya
-                            menjadi sarana rekreasi, tetapi juga berpotensi melahirkan atlet-atlet berprestasi yang mampu
-                            bersaing di tingkat nasional maupun internasional.
+                            Next Play hadir untuk menyatukan para pecinta padel dalam lingkungan olahraga yang kompetitif,
+                            suportif, dan penuh semangat. Kami menjadi wadah bagi pemain dan klub untuk saling terhubung,
+                            mengembangkan kemampuan, serta merasakan pengalaman berkompetisi melalui berbagai liga dan
+                            turnamen. Lebih dari sekadar pertandingan, Next Play ingin membangun ekosistem padel yang
+                            mendorong sportivitas, kebersamaan, dan perkembangan prestasi.
                         </p>
                         {{-- <a href="#kontak" class="link-green">Selengkapnya <i class="bi bi-arrow-right"></i></a> --}}
                     </div>
