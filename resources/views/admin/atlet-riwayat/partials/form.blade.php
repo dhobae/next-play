@@ -19,14 +19,8 @@
     </div>
     <div class="col-md-6 mb-3">
         <label for="hasil_turnamen" class="form-label">Hasil Turnamen</label>
-        <select name="hasil_turnamen" id="hasil_turnamen" class="form-select select2" required>
-            <option value="">Pilih hasil turnamen</option>
-            @foreach (['Champions', 'Runner Up', 'R32', 'R16', 'R8', 'R4', 'Kualifikasi'] as $hasil)
-                <option value="{{ $hasil }}" @selected(old('hasil_turnamen', $riwayat?->hasil_turnamen) === $hasil)>
-                    {{ $hasil }}
-                </option>
-            @endforeach
-        </select>
+        <input type="text" name="hasil_turnamen" id="hasil_turnamen" class="form-control"
+            value="{{ old('hasil_turnamen', $riwayat?->hasil_turnamen) }}" maxlength="255" required>
         @error('hasil_turnamen')
             <small class="text-danger">{{ $message }}</small>
         @enderror
@@ -40,14 +34,3 @@
         @enderror
     </div>
 </div>
-
-<script>
-    const hasilTurnamenModal = $('#hasil_turnamen').closest('.modal');
-
-    $('#hasil_turnamen').select2({
-        theme: 'bootstrap-5',
-        placeholder: 'Pilih hasil turnamen',
-        width: '100%',
-        dropdownParent: hasilTurnamenModal.length ? hasilTurnamenModal : $(document.body)
-    });
-</script>

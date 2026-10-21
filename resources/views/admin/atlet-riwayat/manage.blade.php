@@ -135,13 +135,13 @@
                     riwayatMethod.prop('disabled', false).val('PUT');
                     $('#nama_turnamen').val(button.data('nama-turnamen'));
                     $('#tanggal_turnamen').val(button.data('tanggal-turnamen'));
-                    $('#hasil_turnamen').val(button.data('hasil-turnamen')).trigger('change');
+                    $('#hasil_turnamen').val(button.data('hasil-turnamen'));
                     $('#poin_turnamen').val(button.data('poin-turnamen'));
                 } else {
                     riwayatForm.attr('action', riwayatStoreUrl);
                     riwayatMethod.prop('disabled', true).val('POST');
                     riwayatForm[0].reset();
-                    $('#hasil_turnamen').val('').trigger('change');
+                    $('#hasil_turnamen').val('');
                 }
             });
 

@@ -75,7 +75,7 @@
                                 class="about-page-image-img">
                         @else
                             <div class="image-placeholder h-100">
-                                <img src="{{ asset('assets/nextpremiere/padel-dummy.png') }}" alt="Visi dan Misi">
+                                <img src="{{ asset('assets/nextpremiere/169-logo.jpg') }}" alt="Visi dan Misi">
                             </div>
                         @endif
                     </div>

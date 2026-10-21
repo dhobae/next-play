@@ -19,7 +19,7 @@ class DatabaseSeeder extends Seeder
             'password' => Hash::make('npadminpremiere'),
         ]);
         
-        $this->call(DemoDataSeeder::class);
+        // $this->call(DemoDataSeeder::class);
 
     }
 }

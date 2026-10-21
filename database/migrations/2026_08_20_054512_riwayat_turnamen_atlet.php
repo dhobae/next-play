@@ -20,15 +20,7 @@ return new class extends Migration {
                     
             $table->string('nama_turnamen');
             $table->date('tanggal_turnamen');
-            $table->enum('hasil_turnamen', [
-                'Champions',
-                'Runner Up',
-                'R32',
-                'R16',
-                'R8',
-                'R4',
-                'Kualifikasi',
-            ]);
+            $table->string('hasil_turnamen');
             $table->integer('poin_turnamen');
             $table->timestamps();
         });

@@ -63,7 +63,6 @@
                         </div>
                     </div>
                     <div class="col-lg-6">
-                        {{-- <p class="eyebrow">TENTANG KOMUNTIAS KAMI</p> --}}
                         <h2>
                             Tentang Komunitas<br /><span>Kami.</span>
                         </h2>
@@ -74,92 +73,10 @@
                             turnamen. Lebih dari sekadar pertandingan, Next Play ingin membangun ekosistem padel yang
                             mendorong sportivitas, kebersamaan, dan perkembangan prestasi.
                         </p>
-                        {{-- <a href="#kontak" class="link-green">Selengkapnya <i class="bi bi-arrow-right"></i></a> --}}
                     </div>
                 </div>
-                {{-- <div class="row stats-row mt-5 g-4">
-                    <div class="col-6 col-lg-3">
-                        <strong>12+</strong><span>Tahun berkarya</span>
-                    </div>
-                    <div class="col-6 col-lg-3">
-                        <strong>48</strong><span>Program berjalan</span>
-                    </div>
-                    <div class="col-6 col-lg-3">
-                        <strong>25K+</strong><span>Penerima manfaat</span>
-                    </div>
-                    <div class="col-6 col-lg-3">
-                        <strong>18</strong><span>Mitra kolaborasi</span>
-                    </div>
-                </div> --}}
             </div>
         </section>
-
-        {{-- <section id="pengurus" class="section-padding section-dark">
-            <div class="container">
-                <div class="section-heading d-flex justify-content-between align-items-end mb-5">
-                    <div>
-                        <p class="eyebrow">ORANG-ORANG DI BALIK GERAKAN</p>
-                        <h2 class="text-white">
-                            Struktur <span>Pengurus.</span>
-                        </h2>
-                    </div>
-                    <p class="heading-note">
-                        Bertemu dengan tim yang mendedikasikan waktu,
-                        energi, dan hati untuk Karya Bersama.
-                    </p>
-                </div>
-                <div class="row g-4">
-                    <div class="col-md-6 col-lg-3">
-                        <article class="person-card">
-                            <div class="image-placeholder person-image">
-                                <img src="{{ asset('assets/nextpremiere/padel-dummy.png') }}" alt="Ahmad Pratama">
-                            </div>
-                            <div class="person-info">
-                                <h3>Ahmad Pratama</h3>
-                                <p>Ketua Umum</p>
-                                <span>01</span>
-                            </div>
-                        </article>
-                    </div>
-                    <div class="col-md-6 col-lg-3">
-                        <article class="person-card">
-                            <div class="image-placeholder person-image">
-                                <img src="{{ asset('assets/nextpremiere/padel-dummy.png') }}" alt="Siti Rahma">
-                            </div>
-                            <div class="person-info">
-                                <h3>Siti Rahma</h3>
-                                <p>Sekretaris</p>
-                                <span>02</span>
-                            </div>
-                        </article>
-                    </div>
-                    <div class="col-md-6 col-lg-3">
-                        <article class="person-card">
-                            <div class="image-placeholder person-image">
-                                <img src="{{ asset('assets/nextpremiere/padel-dummy.png') }}" alt="Bagas Wicaksono">
-                            </div>
-                            <div class="person-info">
-                                <h3>Bagas Wicaksono</h3>
-                                <p>Bendahara</p>
-                                <span>03</span>
-                            </div>
-                        </article>
-                    </div>
-                    <div class="col-md-6 col-lg-3">
-                        <article class="person-card">
-                            <div class="image-placeholder person-image">
-                                <img src="{{ asset('assets/nextpremiere/padel-dummy.png') }}" alt="Nadia Lestari">
-                            </div>
-                            <div class="person-info">
-                                <h3>Nadia Lestari</h3>
-                                <p>Koordinator Program</p>
-                                <span>04</span>
-                            </div>
-                        </article>
-                    </div>
-                </div>
-            </div>
-        </section> --}}
 
         <section id="event" class="section-padding">
             <div class="container">
@@ -179,7 +96,7 @@
                                     @if ($event->gambar)
                                         <img src="{{ asset('storage/' . $event->gambar) }}" alt="{{ $event->judul }}">
                                     @else
-                                        <img src="{{ asset('assets/nextpremiere/padel-dummy.png') }}"
+                                        <img src="{{ asset('assets/nextpremiere/169-logo.jpg') }}"
                                             alt="{{ $event->judul }}">
                                     @endif
                                 </div>
@@ -199,7 +116,7 @@
                         <div class="col-lg-4">
                             <article class="news-card">
                                 <div class="image-placeholder news-image">
-                                    <img src="{{ asset('assets/nextpremiere/padel-dummy.png') }}"
+                                    <img src="{{ asset('assets/nextpremiere/169-logo.jpg') }}"
                                         alt="Event berikutnya akan hadir">
                                 </div>
                                 <div class="news-body">
@@ -238,21 +155,6 @@
                 </div>
             </div>
         </section>
-
-        {{-- <section id="kontak" class="cta-section">
-            <div class="container">
-                <div class="cta-box">
-                    <div>
-                        <p class="eyebrow">JADI BAGIAN DARI PERUBAHAN</p>
-                        <h2>
-                            Karena kebaikan<br /><span>selalu lebih baik bersama.</span>
-                        </h2>
-                    </div>
-                    <a href="mailto:halo@karyabersama.id" class="btn btn-green btn-lg">Mari Terhubung
-                        <i class="bi bi-arrow-up-right ms-2"></i></a>
-                </div>
-            </div>
-        </section> --}}
     </main>
 @endsection
 

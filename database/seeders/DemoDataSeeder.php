@@ -218,7 +218,7 @@ class DemoDataSeeder extends Seeder
             ->delete();
 
         $tournaments = ['Premiere Cup', 'City Open', 'National Padel Series'];
-        $results = ['Champions', 'Runner Up', 'R4', 'R8', 'R16', 'R32', 'Kualifikasi'];
+        $results = ['Juara 1', 'Runner-up', 'Semifinalis', 'Perempat finalis', 'Babak 16 besar', 'Babak 32 besar', 'Tidak lolos kualifikasi'];
 
         foreach ($tournaments as $tournamentIndex => $tournament) {
             $year = 2022 + (($athleteSequence + $tournamentIndex) % 5);
