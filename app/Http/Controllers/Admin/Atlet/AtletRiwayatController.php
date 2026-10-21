@@ -86,7 +86,7 @@ class AtletRiwayatController extends Controller
         return $request->validate([
             'nama_turnamen' => 'required|string|max:255',
             'tanggal_turnamen' => 'required|date',
-            'hasil_turnamen' => 'required|in:Champions,Runner Up,R32,R16,R8,R4,Kualifikasi',
+            'hasil_turnamen' => 'required|string|max:255',
             'poin_turnamen' => 'required|integer',
         ]);
     }

@@ -35,6 +35,6 @@ class SeasonKlub extends Model
             'season_klub_atlet',
             'season_klub_id',
             'atlet_id'
-        );
+        )->withPivot('season_id');
     }
 }

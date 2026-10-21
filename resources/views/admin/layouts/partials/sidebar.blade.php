@@ -8,7 +8,7 @@
 
 <div class="sidebar-wrapper">
     <nav class="mt-2" aria-label="Main navigation">
-        <ul class="nav sidebar-menu flex-column" data-lte-toggle="treeview" data-accordion="false" id="navigation">
+        <ul class="nav sidebar-menu flex-column" data-lte-toggle="treeview" data-accordion="true" id="navigation">
             <li class="nav-item"><a href="{{ route('home') }}"
                     class="nav-link {{ Request::is('admin/beranda') ? 'active' : '' }}"><i
                         class="nav-icon bi bi-speedometer2"></i>

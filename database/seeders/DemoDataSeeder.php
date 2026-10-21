@@ -170,10 +170,15 @@ class DemoDataSeeder extends Seeder
                         'lp' => $pointsAgainst,
                     ];
 
-                    SeasonKlub::updateOrCreate(
+                    $seasonKlub = SeasonKlub::updateOrCreate(
                         ['season_id' => $season->id, 'klub_id' => $club->id],
                         $statistics
-                    )->atlets()->sync(collect($rosters[$club->nama_klub])->pluck('id')->all());
+                    );
+
+                    $seasonKlub->atlets()->syncWithPivotValues(
+                        collect($rosters[$club->nama_klub])->pluck('id')->all(),
+                        ['season_id' => $season->id]
+                    );
 
                     foreach ($statistics as $key => $value) {
                         $seasonTotals[$key] += $value;
@@ -213,7 +218,7 @@ class DemoDataSeeder extends Seeder
             ->delete();
 
         $tournaments = ['Premiere Cup', 'City Open', 'National Padel Series'];
-        $results = ['Champions', 'Runner Up', 'R4', 'R8', 'R16', 'R32', 'Kualifikasi'];
+        $results = ['Juara 1', 'Runner-up', 'Semifinalis', 'Perempat finalis', 'Babak 16 besar', 'Babak 32 besar', 'Tidak lolos kualifikasi'];
 
         foreach ($tournaments as $tournamentIndex => $tournament) {
             $year = 2022 + (($athleteSequence + $tournamentIndex) % 5);

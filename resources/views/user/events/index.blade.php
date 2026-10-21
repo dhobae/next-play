@@ -27,7 +27,7 @@
                         @if ($featuredEvent->gambar)
                             <img src="{{ asset('storage/' . $featuredEvent->gambar) }}" alt="{{ $featuredEvent->judul }}">
                         @else
-                            <img src="{{ asset('assets/nextpremiere/padel-dummy.png') }}" alt="{{ $featuredEvent->judul }}">
+                            <img src="{{ asset('assets/nextpremiere/169-logo.jpg') }}" alt="{{ $featuredEvent->judul }}">
                         @endif
                     </div>
                     <div class="featured-event-copy">
@@ -44,7 +44,7 @@
             @else
                 <article class="featured-event mb-5">
                     <div class="image-placeholder featured-event-image">
-                        <img src="{{ asset('assets/nextpremiere/padel-dummy.png') }}" alt="Belum ada event terbaru">
+                        <img src="{{ asset('assets/nextpremiere/169-logo.jpg') }}" alt="Belum ada event terbaru">
                     </div>
                     <div class="featured-event-copy">
                         <h3>Belum ada event terbaru</h3>
@@ -96,13 +96,6 @@
                             </ul>
                         </div>
                     </div>
-
-                    {{-- <div class="splide-nav-wrap">
-                    <button class="splide__arrow splide__arrow--prev event-splide-prev" type="button"
-                        aria-label="Sebelumnya"></button>
-                    <button class="splide__arrow splide__arrow--next event-splide-next" type="button"
-                        aria-label="Berikutnya"></button>
-                </div> --}}
                 </div>
             @endif
         </div>
